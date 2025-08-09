@@ -18,7 +18,7 @@
   <div class="menu-icon" onclick="toggleMenu()">
     <i class="bi bi-list"></i>
   </div>
-  <a href="https://samaxan.ir" class="logo">🎵 Sama Xan</a>
+  <a href="https://samaxan.ir" class="logo player-page-logo">🎵 Sama Xan</a>
 
   <nav id="navMenu">
     <a href="https://samaxan.ir/bio.html" class="menulink">بیوگرافی</a>

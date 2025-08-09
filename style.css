@@ -317,7 +317,6 @@ nav a:hover {
 }
 
 @keyframes pulseGlow {
-
   0%,
   100% {
     box-shadow: 0 0 20px #00ffff;
@@ -679,10 +678,10 @@ footer {
 
 .music-list {
   max-width: 100%;
-  margin: 0px 50px;
+  margin: 0px 56px 0 50px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 15px;
   flex-wrap: wrap;
@@ -721,7 +720,7 @@ footer {
   margin-bottom: 15px;
 }
 
-audio {
+.music-item audio {
   width: 100%;
   height: 40px;
   margin-bottom: 15px;
@@ -773,7 +772,7 @@ audio {
   font-family: Tahoma;
   color: #fff;
   position: sticky;
-  top: 73px;
+  top: 79px;
   z-index: 999;
   display: flex;
   align-items: center;
@@ -950,7 +949,6 @@ audio {
 
 /* صفحه موزیک */
 
-
 /* بخش اصلی صفحه */
 main.track-page {
   max-width: 700px;
@@ -978,11 +976,9 @@ main.track-page {
   margin-bottom: 1.5rem;
 }
 
-.player-single audio {
-  width: 100%;
-  border-radius: 10px;
-  outline: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+.track-page-audio {
+  width: 90%;
+  border-radius: 50px;
 }
 
 .btn-download {
@@ -990,7 +986,7 @@ main.track-page {
   margin-top: 10px;
   background-color: #f9c74f;
   color: #121212;
-  padding: 10px 20px;
+  padding: 15px;
   border-radius: 30px;
   font-weight: 700;
   text-decoration: none;
@@ -998,7 +994,7 @@ main.track-page {
 }
 
 .btn-download:hover {
-  background-color: #e0b644;
+  background-color: #ffc53d;
 }
 
 /* بخش ویدیو */
@@ -1078,16 +1074,16 @@ main.track-page {
   flex-direction: column;
 }
 
-.lyrics-box pre{
+.lyrics-box pre {
   text-align: justify;
-  white-space:initial;
+  white-space: initial;
   line-height: 2rem;
 }
 
 /* ریسپانسیو */
 @media (max-width: 768px) {
   main.track-page {
-    margin: 1rem 1rem 4rem 1rem;
+    margin: 2rem 1rem;
     padding: 1.2rem 1.5rem;
   }
 
@@ -1178,7 +1174,6 @@ main.track-page {
 
   .menu-icon {
     display: block;
-    margin-top: 7px;
     color: #fff;
   }
 
@@ -1269,6 +1264,7 @@ main.track-page {
     width: 100%;
     max-width: 265px;
     margin-bottom: 0px;
+    height: 45px;
   }
 
   .controls {
@@ -1307,7 +1303,7 @@ main.track-page {
   }
 
   .music-search-container {
-    width: 80%;
+    width: 90%;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -1321,14 +1317,21 @@ main.track-page {
   .search-box input {
     padding: 10px 15px;
     position: absolute;
-    width: 80%;
+    width: 75%;
     font-size: 14px;
   }
 
   .music-heading {
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     display: block;
+  }
+  .music-list {
+    justify-content: center;
+    margin: 0px;
+  }
+  .music-item {
+    width: 330px;
   }
 
   .unique {
@@ -1349,5 +1352,47 @@ main.track-page {
 
   .player-footer {
     padding-bottom: 195px;
+  }
+  .player-page-logo {
+    font-size: 1.3rem;
+  }
+  .bi-list {
+    display: flex;
+  }
+
+  .track-music-header {
+    font-size: 1.3rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-bottom: 15px;
+  }
+
+  .meta-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+    font-weight: 700;
+  }
+  .meta-box span {
+    text-align: right;
+  }
+  .share-buttons a {
+    font-size: 1rem;
+  }
+
+  .track-footer {
+    margin-top: 0px;
+  }
+  .track-page-audio{
+    width: 100%;
+    box-shadow: 0px 0px 40px rgb(0 0 0 / 24%);
+  }
+  .btn-download{
+    width: 100%;
+  }
+  .player-single{
+    margin: 2rem auto 1rem auto;
   }
 }

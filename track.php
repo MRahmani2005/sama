@@ -88,7 +88,7 @@ if (file_exists($lyricsPath)) {
   <!-- استایل -->
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="style.css?v=20250823">
+  <link rel="stylesheet" href="style.css?v=20250824">
 
 </head>
 <body>
@@ -112,13 +112,7 @@ if (file_exists($lyricsPath)) {
       <img src="<?= htmlspecialchars($coverPath) ?>" alt="کاور <?= htmlspecialchars($title) ?>" style="max-width: 300px; width: 100%; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);" />
     </div>
   <?php endif; ?>
-  <div class="player-single">
-    <audio controls>
-      <source src="<?= $audioPath ?>" type="audio/<?= $ext ?>">
-      مرورگر شما پشتیبانی نمی‌کند.
-    </audio>
-    <a class="btn-download" href="download.php?file=<?= urlencode($filename) ?>&title=<?= urlencode($title) ?>">⬇️ دانلود</a>
-  </div>
+
 <?php if (!empty($videoEmbed)): ?>
   <section class="video-box">
     <h2>🎬 موزیک ویدیو: <?= htmlspecialchars($title) ?></h2>
@@ -128,7 +122,7 @@ if (file_exists($lyricsPath)) {
   </section>
 <?php endif; ?>
   <div class="meta-box">
-    <span>📁 فرمت: <?= strtoupper($ext) ?></span> | 
+    <span>📁 فرمت: <?= strtoupper($ext) ?></span>
     <span>📅 تاریخ انتشار: <?= date("Y/m/d H:i", filemtime($audioPath)) ?></span>
   </div>
 
@@ -154,10 +148,17 @@ if (file_exists($lyricsPath)) {
     <pre><?= $lyrics ?></pre>
   </section>
   <?php endif; ?>
+    <div class="player-single">
+    <audio controls class="track-page-audio">
+      <source src="<?= $audioPath ?>" type="audio/<?= $ext ?>">
+      مرورگر شما پشتیبانی نمی‌کند.
+    </audio>
+    <a class="btn-download" href="download.php?file=<?= urlencode($filename) ?>&title=<?= urlencode($title) ?>">دانلود</a>
+  </div>
 </main>
 
 <!-- فوتر -->
-    <footer id="footer" class="footer">
+    <footer id="footer" class="footer track-footer">
       <div class="column">
         <div class="logo">sama xan</div>
         <p>وب سایت رسمی سما خان</p>
