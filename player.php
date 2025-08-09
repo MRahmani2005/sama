@@ -128,7 +128,7 @@ if (is_dir($folder)) {
         echo "<audio controls preload='none'><source src='$audioPath' type='audio/$ext'>مرورگر شما پشتیبانی نمی‌کند.</audio>";
         echo "<a class='track' data-title='$title' href='$audioPath' style='display:none'></a>"; 
         if ($lyrics) echo "<div class='lyrics'>$lyrics</div>"; echo "<a href='track.php?file=" . urlencode($file) . "' class='btn-more'>صفحه اختصاصی</a>";
-        echo "<a class='btn-download' href='download.php?file=" . urlencode($file) . "&title=" . urlencode($title) . "'>دانلود</a>";
+        echo "<a class='lyrics-btn-download' href='download.php?file=" . urlencode($file) . "&title=" . urlencode($title) . "'>دانلود</a>";
             echo "</div>"; // پایان music-item 
         }
         } else {
