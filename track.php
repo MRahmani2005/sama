@@ -88,7 +88,7 @@ if (file_exists($lyricsPath)) {
   <!-- استایل -->
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="style.css?v=20250820">
+  <link rel="stylesheet" href="style.css?v=20250822">
 
 </head>
 <body>
