@@ -2,6 +2,7 @@
   font-family: sama;
   src: url("fonts/IRANYekanXVF.woff") format("woff");
 }
+
 @font-face {
   font-family: khan;
   src: url("fonts/IRANYekanXVF.woff2") format("woff2");
@@ -11,6 +12,7 @@
   box-sizing: border-box;
   font-family: "sama";
 }
+
 body {
   margin: 0;
   font-family: "sama";
@@ -59,6 +61,7 @@ body {
   border-radius: 10px;
   display: flex;
 }
+
 a.instagram-box::before {
   content: "";
   width: 30%;
@@ -71,10 +74,12 @@ a.instagram-box::before {
   animation: instagramglow 2s ease infinite;
   position: absolute;
 }
+
 @keyframes instagramglow {
   0% {
     right: -100%;
   }
+
   100% {
     right: 120%;
   }
@@ -89,12 +94,14 @@ nav {
   display: flex;
   gap: 35px;
 }
+
 nav a {
   color: #fff;
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s;
 }
+
 nav a:hover {
   color: #00ffff;
 }
@@ -108,6 +115,7 @@ nav a:hover {
   max-width: 1100px;
   padding: 0 20px;
 }
+
 .card {
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 16px;
@@ -118,29 +126,35 @@ nav a:hover {
   transition: 0.4s;
   animation: floatCard 1s ease-in-out;
 }
+
 .card:hover {
   transform: translateY(-8px) scale(1.03);
   background-color: rgba(255, 255, 255, 0.12);
 }
+
 @keyframes floatCard {
   from {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 .card i {
   font-size: 40px;
   margin-bottom: 15px;
   color: #00ffff;
 }
+
 .card h2 {
   font-size: 18px;
   margin-bottom: 15px;
 }
+
 .card a {
   font-size: 14px;
   text-decoration: none;
@@ -151,6 +165,7 @@ nav a:hover {
   display: inline-block;
   transition: 0.3s;
 }
+
 .card a:hover {
   background: #38e6e6;
 }
@@ -174,16 +189,19 @@ nav a:hover {
   position: relative;
   overflow: hidden;
 }
+
 .bio * {
   position: relative;
   z-index: 1;
 }
+
 .bio h2 {
   font-size: 18px;
   color: #8f8f8f;
   margin-bottom: 10px;
   text-align: right;
 }
+
 .bio p {
   margin-top: 0px;
   width: 505px;
@@ -192,6 +210,7 @@ nav a:hover {
   text-align: justify;
   color: #fff;
 }
+
 .bio img {
   width: 405px;
   height: 405px;
@@ -227,6 +246,7 @@ nav a:hover {
   align-items: center;
   margin-top: 15px;
 }
+
 .bio .buttons .more {
   font-size: 16px;
   background-color: transparent;
@@ -236,9 +256,11 @@ nav a:hover {
   border-radius: 50px;
   cursor: pointer;
 }
+
 .buttons a {
   text-decoration: none;
 }
+
 .bio .buttons .songs {
   font-size: 16px;
   display: flex;
@@ -254,6 +276,7 @@ nav a:hover {
   overflow: hidden;
   cursor: pointer;
 }
+
 .songs::before {
   content: "";
   width: 30%;
@@ -266,14 +289,17 @@ nav a:hover {
   background-color: #fff;
   position: absolute;
 }
+
 @keyframes myglow {
   0% {
     right: -100%;
   }
+
   100% {
     right: 120%;
   }
 }
+
 .more-btn {
   margin-top: 20px;
   padding: 10px 25px;
@@ -291,10 +317,12 @@ nav a:hover {
 }
 
 @keyframes pulseGlow {
+
   0%,
   100% {
     box-shadow: 0 0 20px #00ffff;
   }
+
   50% {
     box-shadow: 0 0 40px #00ffff;
   }
@@ -315,12 +343,14 @@ footer {
   background-color: #1f2937;
   color: #aaa;
 }
+
 .social-icons i {
   font-size: 24px;
   margin: 0 10px;
   color: #fff;
   transition: color 0.3s;
 }
+
 .social-icons i:hover {
   color: #00ffff;
 }
@@ -349,6 +379,7 @@ footer {
   from {
     text-shadow: 0px 0px 5px #f0ff24, 0px 0px 5px #f0ff241e;
   }
+
   to {
     text-shadow: 0px 0px 20px #f0ff24, 0px 0px 20px #f0ff243a;
   }
@@ -359,6 +390,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
 .circle {
   width: 40px;
   height: 40px;
@@ -380,6 +412,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
 }
+
 .biobox:hover {
   box-shadow: 0 6px 20px rgba(0, 255, 255, 0.6);
 }
@@ -420,6 +453,7 @@ footer {
   0% {
     scale: 1;
   }
+
   100% {
     scale: 1.05;
   }
@@ -429,18 +463,22 @@ footer {
   transform: scale(1.03);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
+
 .language-switcher {
   display: flex;
   justify-content: center;
-  gap: 6px; /* کمتر از قبل */
-  margin: 15px 0; /* کمی کمتر از قبل */
+  gap: 6px;
+  /* کمتر از قبل */
+  margin: 15px 0;
+  /* کمی کمتر از قبل */
   font-family: sama, Vazirmatn, sans-serif;
   user-select: none;
   direction: rtl;
 }
 
 .language-switcher a {
-  padding: 5px 10px; /* کمتر از قبل */
+  padding: 5px 10px;
+  /* کمتر از قبل */
   font-size: 1rem;
   color: #00ffff;
   text-decoration: none;
@@ -448,11 +486,13 @@ footer {
   transition: color 0.3s, background-color 0.3s;
   cursor: pointer;
   user-select: none;
-  margin: 0; /* حذف مارجین اضافی */
+  margin: 0;
+  /* حذف مارجین اضافی */
 }
 
 .language-switcher a:hover {
-  color: #facc15; /* رنگ زرد طلایی */
+  color: #facc15;
+  /* رنگ زرد طلایی */
   background-color: rgba(250, 204, 21, 0.15);
   border-color: #facc15;
   box-shadow: 0 0 20px #facc15;
@@ -483,6 +523,7 @@ footer {
     gap: 10px;
     flex-wrap: wrap;
   }
+
   .language-switcher a {
     padding: 6px 14px;
     font-size: 0.9rem;
@@ -504,6 +545,7 @@ footer {
     font-size: 0.9rem;
   }
 }
+
 /* اسلایدر */
 .slider-container {
   display: flex;
@@ -615,6 +657,7 @@ footer {
   font-size: 1.5rem;
   color: #facc15;
 }
+
 .search-box {
   display: flex;
   justify-content: center;
@@ -629,6 +672,7 @@ footer {
   border-radius: 8px;
   border: none;
 }
+
 #searchInput:focus {
   outline: 1px solid #00ffff;
 }
@@ -643,6 +687,7 @@ footer {
   gap: 15px;
   flex-wrap: wrap;
 }
+
 .music-item {
   width: 300px;
   background: rgba(255, 255, 255, 0.05);
@@ -653,10 +698,12 @@ footer {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .music-item:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
+
 .music-title {
   white-space: nowrap;
   overflow: hidden;
@@ -667,11 +714,13 @@ footer {
   color: #ffd700;
   text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
 }
+
 .music-meta {
   font-size: 13px;
   color: #ccc;
   margin-bottom: 15px;
 }
+
 audio {
   width: 100%;
   height: 40px;
@@ -679,6 +728,7 @@ audio {
   outline: none;
   border-radius: 8px;
 }
+
 .lyrics {
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -692,6 +742,7 @@ audio {
   text-overflow: ellipsis;
   margin: 0px auto 20px auto;
 }
+
 .btn-download {
   width: 50%;
   display: inline;
@@ -751,6 +802,7 @@ audio {
   max-width: 400px;
   margin-bottom: 0px;
 }
+
 .controls {
   display: flex;
   flex-direction: row;
@@ -801,6 +853,7 @@ audio {
   font-size: 13px;
   color: #aaa;
 }
+
 .footer {
   width: 100%;
   background: rgba(15, 23, 42, 0.9);
@@ -895,6 +948,167 @@ audio {
   cursor: pointer;
 }
 
+/* صفحه موزیک */
+
+
+/* بخش اصلی صفحه */
+main.track-page {
+  max-width: 700px;
+  background: #fff;
+  margin: 2rem auto 4rem auto;
+  padding: 2rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* عنوان آهنگ */
+.track-music-header {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #121212;
+  text-align: center;
+  border-bottom: 2px solid #f9c74f;
+  padding-bottom: 10px;
+}
+
+/* پلیر صوتی */
+.player-single {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.player-single audio {
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-download {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #f9c74f;
+  color: #121212;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: #e0b644;
+}
+
+/* بخش ویدیو */
+.video-box {
+  margin: 2rem 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: #000;
+  padding: 1rem;
+  text-align: center;
+}
+
+.video-box h2 {
+  color: #f9c74f;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.video-embed iframe,
+.video-embed video {
+  width: 100%;
+  max-height: 400px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* متا دیتا */
+.meta-box {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* دکمه‌های اشتراک گذاری */
+.share-buttons {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.share-buttons p {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #121212;
+}
+
+.share-buttons a {
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #444;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.share-buttons a:hover {
+  color: #f9c74f;
+}
+
+/* متن آهنگ */
+.lyrics-box {
+  display: flex;
+  background: #fff7d6;
+  border: 1px solid #f9c74f;
+  padding: 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  color: #444;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lyrics-box pre{
+  text-align: justify;
+  white-space:initial;
+  line-height: 2rem;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  main.track-page {
+    margin: 1rem 1rem 4rem 1rem;
+    padding: 1.2rem 1.5rem;
+  }
+
+  .music-header {
+    font-size: 1.6rem;
+  }
+
+  .video-embed iframe,
+  .video-embed video {
+    max-height: 250px;
+  }
+
+  .cover-container img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+  }
+}
+
 /*  ریسپانسیو  */
 @media (max-width: 768px) {
   nav {
@@ -917,30 +1131,37 @@ audio {
     align-items: center;
     margin: 10px 0;
   }
+
   .bio img {
     width: 77%;
     height: 77%;
   }
+
   .bio .img {
     width: 450px;
     height: 450px;
   }
+
   .headingone {
     margin-top: 20px;
   }
+
   .bio h2 {
     display: none;
   }
+
   .bio .biotext {
     margin-top: 15px;
     width: initial;
     line-height: 2rem;
   }
+
   .container {
     flex-wrap: wrap;
     padding: 0px;
     margin: 40px 25px;
   }
+
   .card {
     display: flex;
     flex-direction: column;
@@ -949,52 +1170,65 @@ audio {
     width: 100%;
     margin: 15px 0px;
   }
+
   nav.show {
     right: 0px;
     transition: 0.4s ease;
   }
+
   .menu-icon {
     display: block;
     margin-top: 7px;
     color: #fff;
   }
+
   .header {
     padding: 10px 25px;
   }
+
   .buttons {
     flex-direction: column;
     width: 100%;
   }
+
   .buttons * {
     display: inline-block;
     width: 100%;
   }
+
   .gallery {
     margin: 60px 25px;
     padding: 0px;
   }
+
   .gallery-grid {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
+
   .gallery-grid img {
     width: 100%;
   }
+
   .more-btn {
     margin-top: 0;
   }
+
   .slider-container {
     overflow: hidden;
     padding: 40px 0px;
   }
+
   .headingtwo {
     margin-top: 40px;
   }
+
   .next-btn-te {
     bottom: 20px;
     right: 36%;
   }
+
   .prev-btn-te {
     bottom: 20px;
     left: 36%;
@@ -1010,13 +1244,15 @@ audio {
     width: 95%;
     right: 5px;
     left: 5px;
-    z-index: 9999; /* مطمئن شو باکس دیده میشه */
+    z-index: 9999;
+    /* مطمئن شو باکس دیده میشه */
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     border: 1px solid #fff;
     padding: 25px 0;
   }
+
   .player.active {
     transition: 0.7s ease;
     bottom: -100%;
@@ -1028,39 +1264,48 @@ audio {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
   .player audio {
     width: 100%;
     max-width: 265px;
     margin-bottom: 0px;
   }
+
   .controls {
     flex-direction: row;
     gap: 10px;
   }
+
   .player .controls button {
     padding: 8px 48px;
     border-radius: 34px;
   }
+
   .social-icons a {
     margin-right: 0px !important;
   }
+
   .biohead {
     margin-top: 30px;
     font-size: 2rem;
   }
+
   .bio-image-container {
     margin: 65px auto 0 auto;
     width: initial;
   }
+
   .bio-img {
     width: 120px;
     margin-bottom: -65px;
     left: 45px;
   }
+
   .biobox {
     margin: 0px 25px;
     padding: 25px;
   }
+
   .music-search-container {
     width: 80%;
     justify-content: center;
@@ -1072,17 +1317,20 @@ audio {
     gap: 25px;
     margin-top: 40px;
   }
+
   .search-box input {
     padding: 10px 15px;
     position: absolute;
     width: 80%;
     font-size: 14px;
   }
+
   .music-heading {
     width: 100%;
     font-size: 1.2rem;
     display: block;
   }
+
   .unique {
     display: flex;
     flex-direction: row;
@@ -1092,11 +1340,13 @@ audio {
     gap: 5px;
     padding: 10px 15px;
   }
+
   .contactme {
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
   }
+
   .player-footer {
     padding-bottom: 195px;
   }

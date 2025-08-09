@@ -88,258 +88,25 @@ if (file_exists($lyricsPath)) {
   <!-- استایل -->
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="style.css?v=<?= filemtime('style.css') ?>">
-  <style>
-  /* پایه و فونت */
-  body {
-    font-family: 'Vazirmatn', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    direction: rtl;
-  }
+  <link rel="stylesheet" href="style.css?v=20250820">
 
-  /* هدر */
-  .header {
-    background: #121212;
-    color: #f9c74f;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-  }
-
-  .header .logo {
-    font-weight: 800;
-    font-size: 1.8rem;
-    text-decoration: none;
-    color: #f9c74f;
-  }
-
-  .header .menu-icon {
-    font-size: 1.6rem;
-    cursor: pointer;
-    color: #f9c74f;
-  }
-
-  #navMenu a {
-    color: #f9c74f;
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-
-  #navMenu a:hover {
-    color: #fff;
-  }
-
-  /* بخش اصلی صفحه */
-  main.track-page {
-    max-width: 700px;
-    background: #fff;
-    margin: 2rem auto 4rem auto;
-    padding: 2rem 2.5rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  }
-
-  /* عنوان آهنگ */
-  .music-header {
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    color: #121212;
-    text-align: center;
-    border-bottom: 2px solid #f9c74f;
-    padding-bottom: 10px;
-  }
-
-  /* پلیر صوتی */
-  .player-single {
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .player-single audio {
-    width: 100%;
-    border-radius: 10px;
-    outline: none;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  }
-
-  .btn-download {
-    display: inline-block;
-    margin-top: 10px;
-    background-color: #f9c74f;
-    color: #121212;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-
-  .btn-download:hover {
-    background-color: #e0b644;
-  }
-
-  /* بخش ویدیو */
-  .video-box {
-    margin: 2rem 0;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    background: #000;
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .video-box h2 {
-    color: #f9c74f;
-    margin-bottom: 1rem;
-    font-weight: 700;
-  }
-
-  .video-embed iframe,
-  .video-embed video {
-    width: 100%;
-    max-height: 400px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-  }
-
-  /* متا دیتا */
-  .meta-box {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    font-weight: 600;
-  }
-
-  /* دکمه‌های اشتراک گذاری */
-  .share-buttons {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .share-buttons p {
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #121212;
-  }
-
-  .share-buttons a {
-    margin: 0 12px;
-    text-decoration: none;
-    font-size: 1.3rem;
-    color: #444;
-    transition: color 0.3s ease;
-    display: inline-block;
-  }
-
-  .share-buttons a:hover {
-    color: #f9c74f;
-  }
-
-  /* متن آهنگ */
-  .lyrics-box {
-    background: #fff7d6;
-    border: 1px solid #f9c74f;
-    padding: 1.5rem;
-    border-radius: 12px;
-    font-size: 1rem;
-    white-space: pre-wrap;
-    line-height: 1.5;
-    color: #444;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-
-  /* فوتر */
-  .footer {
-    background: #121212;
-    color: #f9c74f;
-    padding: 1.5rem 2rem;
-    text-align: center;
-    font-size: 0.9rem;
-  }
-
-  .footer .logo {
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-
-  /* ستون‌های فوتر */
-  .footer .column {
-    margin-bottom: 1rem;
-  }
-
-  .footer .nav-links a,
-  .footer .social-icons a {
-    color: #f9c74f;
-    margin: 0 5px;
-    text-decoration: none;
-    font-size: 1.3rem;
-  }
-
-  .footer .nav-links a:hover,
-  .footer .social-icons a:hover {
-    color: #fff;
-  }
-
-  /* آیکون‌ها */
-  .footer .social-icons a {
-    margin-left: 10px;
-  }
-
-  /* ریسپانسیو */
-  @media (max-width: 768px) {
-    main.track-page {
-      margin: 1rem 1rem 4rem 1rem;
-      padding: 1.2rem 1.5rem;
-    }
-
-    .music-header {
-      font-size: 1.6rem;
-    }
-
-    .video-embed iframe,
-    .video-embed video {
-      max-height: 250px;
-    }
-    .cover-container img {
-  max-width: 300px;
-  width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  display: inline-block;
-}
-  }
-</style>
 </head>
 <body>
 
-<header class="header">
-  <a href="https://samaxan.ir" class="logo">🎵 Sama Xan</a>
-  <div class="menu-icon" onclick="toggleMenu()">
-    <i class="bi bi-list"></i>
-  </div>
-  <nav id="navMenu">
-    <a href="https://samaxan.ir/bio.html" class="menulink">بیوگرافی</a>
-    <a href="https://samaxan.ir/music/player.php" class="menulink">آهنگ‌ها</a>
-    <a href="#posts" class="menulink">پست‌ها</a>
-    <a href="#footer" class="menulink">پروفایل ها</a>
-  </nav>
-</header>
+    <header class="header">
+      <a href="https://samaxan.ir" class="logo">🎵 Sama Xan</a>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <i class="bi bi-list"></i>
+      </div>
+      <nav id="navMenu">
+        <a href="https://samaxan.ir/bio.html" class="menulink">بیوگرافی</a>
+        <a href="https://samaxan.ir/player.php" class="menulink">آهنگ‌ها</a>
+        <a href="#posts" class="menulink">پست‌ها</a>
+        <a href="#footer" class="menulink">پروفایل ها</a>
+      </nav>
+    </header>
 <main class="track-page">
-  <h1 class="music-header"><?= $title ?></h1>
+  <h1 class="track-music-header"><?= $title ?></h1>
   <?php if ($coverPath): ?>
     <div class="cover-container" style="text-align:center; margin-bottom: 1.5rem;">
       <img src="<?= htmlspecialchars($coverPath) ?>" alt="کاور <?= htmlspecialchars($title) ?>" style="max-width: 300px; width: 100%; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);" />
@@ -390,26 +157,33 @@ if (file_exists($lyricsPath)) {
 </main>
 
 <!-- فوتر -->
-<footer id="footer" class="footer">
-  <div class="column">
-    <div class="logo">sama xan</div>
-    <p>وب سایت رسمی سما خان</p>
-  </div>
-  <div class="column nav-links">
-    <h4 style="color: #f9c74f">صفحات</h4>
-    <a href="https://pedramfaizi.ir/sama/home.htm">تست</a><br />
-    <a href="https://pedramfaizi.ir/sama/index.ph">تست</a><br />
-    <a href="https://pedramfaizi.ir/sama/posts.ph">تست</a><br />
-  </div>
-  <div class="column social-icons">
-    <h4 style="color: #f9c74f">پروفایل ها</h4>
-    <a href="https://www.instagram.com/samaxaaan"><i class="bi bi-instagram"></i></a>
-    <a href="https://t.me/samaxanmusic1"><i class="bi bi-telegram"></i></a>
-    <a href="https://www.tiktok.com/@samaxaaan"><i class="bi bi-tiktok"></i></a>
-    <a href="https://m.youtube.com/@samaxaaan"><i class="bi bi-youtube"></i></a>
-  </div>
-  <div class="copyright">© 2025 Sama xan</div>
-</footer>
+    <footer id="footer" class="footer">
+      <div class="column">
+        <div class="logo">sama xan</div>
+        <p>وب سایت رسمی سما خان</p>
+      </div>
+      <div class="column nav-links">
+        <h4 style="color: #f9c74f">صفحات</h4>
+        <a href="https://samaxan.ir/bio.html">بیوگرافی</a><br />
+        <a href="">تست</a><br />
+        <a href="">تست</a><br />
+      </div>
+      <div class="column social-icons">
+        <h4 style="color: #f9c74f">پروفایل ها</h4>
+        <a href="https://www.instagram.com/samaxaaan"
+          ><i class="bi bi-instagram"></i
+        ></a>
+        <a href="https://t.me/samaxanmusic1"><i class="bi bi-telegram"></i></a>
+        <a href="https://www.tiktok.com/@samaxaaan"
+          ><i class="bi bi-tiktok"></i
+        ></a>
+        <a href="https://m.youtube.com/@samaxaaan"
+          ><i class="bi bi-youtube"></i
+        ></a>
+      </div>
+      <div class="copyright">© 2025 Sama xan</div>
+    </footer>
+<script src="script.js?v=20250806"></script>
 
 </body>
 </html>
