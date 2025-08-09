@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
   <!-- فایل‌های css و js با جلوگیری از کش -->
-  <link rel="stylesheet" href="style.css?v=20250822">
+  <link rel="stylesheet" href="style.css?v=20250823">
 </head>
 
 <body>
