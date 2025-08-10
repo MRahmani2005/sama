@@ -64,6 +64,32 @@ window.addEventListener("load", () => {
   const ageText = `${age.years} ساڵ، ${age.months} مانگ و ${age.days} ڕۆژ`;
   document.getElementById("age1").textContent = ageText;
 });
+function getExactAge(birthDateString) {
+  const birthDate = new Date(birthDateString);
+  const now = new Date();
+
+  let years = now.getFullYear() - birthDate.getFullYear();
+  let months = now.getMonth() - birthDate.getMonth();
+  let days = now.getDate() - birthDate.getDate();
+
+  if (days < 0) {
+    months -= 1;
+    days += new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+  }
+
+  if (months < 0) {
+    years -= 1;
+    months += 12;
+  }
+
+  return { years, months, days };
+}
+
+window.addEventListener("load", () => {
+  const age = getExactAge("2000-06-20"); // تاریخ تولد
+  const ageText = `${age.years} year ${age.months} month ${age.days} day` ;
+  document.getElementById("age2").textContent = ageText;
+});
 
 // slider
 

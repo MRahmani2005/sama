@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>دانلود تمام آهنگ های سما خان</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon"  href="https://samaxan.ir/img/samaxan-gallery38.jpg"/>
 
   <!-- فونت و آیکون -->
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
@@ -22,7 +23,7 @@
 
   <nav id="navMenu">
     <a href="https://samaxan.ir/bio.html" class="menulink">بیوگرافی</a>
-    <a href="https://samaxan.ir/music/player.php" class="menulink">آهنگ‌ها</a>
+    <a href="https://samaxan.ir/player.php" class="menulink">آهنگ‌ها</a>
     <a href="#posts" class="menulink">پست‌ها</a>
     <a href="#footer" class="menulink">پروفایل ها</a>
   </nav>
