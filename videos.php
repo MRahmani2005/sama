@@ -41,7 +41,7 @@ sort($audioFiles);
 
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="style.css?v=<?= filemtime('style.css') ?>" />
+  <link rel="stylesheet" href="style.css?v=20250823" />
   <style>
     body {
       font-family: 'Vazirmatn', sans-serif;
@@ -51,7 +51,7 @@ sort($audioFiles);
       color: #333;
       margin: 0;
     }
-    h1 {
+    .video-page-h1 {
       text-align: center;
       color: #f9c74f;
       margin-bottom: 30px;
@@ -59,7 +59,7 @@ sort($audioFiles);
       font-size: 2.4rem;
       text-shadow: 0 0 3px #b8921a;
     }
-    .gallery {
+    .video-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 25px;
@@ -96,42 +96,7 @@ sort($audioFiles);
       border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
-    /* Header */
-    .header {
-      background: #121212;
-      color: #f9c74f;
-      padding: 15px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-      margin-bottom: 25px;
-    }
-    .header .logo {
-      font-weight: 800;
-      font-size: 1.8rem;
-      text-decoration: none;
-      color: #f9c74f;
-    }
-    .header .menu-icon {
-      font-size: 1.6rem;
-      cursor: pointer;
-      color: #f9c74f;
-      user-select: none;
-    }
-    #navMenu a {
-      color: #f9c74f;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    #navMenu a:hover {
-      color: #fff;
-    }
+   
     /* Footer */
     .footer {
       background: #121212;
@@ -164,7 +129,7 @@ sort($audioFiles);
     }
     /* Responsive */
     @media (max-width: 768px) {
-      .gallery {
+      .video-gallery {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       }
       .video-embed iframe,
@@ -187,20 +152,20 @@ sort($audioFiles);
 <body>
 
 <header class="header">
-  <a href="https://samaxan.ir" class="logo">🎵 Sama Xan</a>
-  <div class="menu-icon" onclick="toggleMenu()">
-    <i class="bi bi-list"></i>
-  </div>
-  <nav id="navMenu">
-    <a href="https://samaxan.ir/bio.html" class="menulink">بیوگرافی</a>
-    <a href="https://samaxan.ir/player.php" class="menulink">آهنگ‌ها</a>
-    <a href="#gallery" class="menulink">گالری ویدیو</a>
-    <a href="#footer" class="menulink">پروفایل ها</a>
-  </nav>
+      <a href="https://samaxan.ir" class="logo">🎵 Sama Xan</a>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <i class="bi bi-list"></i>
+      </div>
+      <nav id="navMenu">
+        <a href="https://samaxan.ir/bio.html" class="menulink">بیوگرافی</a>
+        <a href="https://samaxan.ir/player.php" class="menulink">آهنگ‌ها</a>
+        <a href="#posts" class="menulink">پست‌ها</a>
+        <a href="#footer" class="menulink">پروفایل ها</a>
+      </nav>
 </header>
 
-<main id="gallery" class="gallery">
-  <h1>گالری موزیک ویدیوها</h1>
+<main id="video-gallery" class="video-gallery">
+  <h1 class="video-page-h1">گالری موزیک ویدیوها</h1>
 
   <?php foreach ($audioFiles as $file):
     $baseName = pathinfo($file, PATHINFO_FILENAME);
@@ -232,7 +197,7 @@ sort($audioFiles);
   <div class="nav-links">
     <a href="https://samaxan.ir/bio.html">بیوگرافی</a>
     <a href="https://samaxan.ir/player.php">آهنگ‌ها</a>
-    <a href="#gallery">گالری ویدیو</a>
+    <a href="#video-gallery">گالری ویدیو</a>
   </div>
   <div class="social-icons">
     <a href="https://www.instagram.com/samaxaaan"><i class="bi bi-instagram"></i></a>
