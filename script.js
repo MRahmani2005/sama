@@ -87,7 +87,7 @@ function getExactAge(birthDateString) {
 
 window.addEventListener("load", () => {
   const age = getExactAge("2000-06-20"); // تاریخ تولد
-  const ageText = `${age.years} year ${age.months} month ${age.days} day` ;
+  const ageText = `${age.years} year ${age.months} month ${age.days} day`;
   document.getElementById("age2").textContent = ageText;
 });
 
@@ -154,4 +154,6 @@ sliderContainer.addEventListener("touchend", (e) => {
   touchXend = e.changedTouches[0].screenX;
   touchUpdate();
 });
+
+// image gallery page sliders
 

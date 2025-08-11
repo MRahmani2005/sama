@@ -1,183 +1,19 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>گالری تصاویر سما خان</title>
-<style>
-  :root {
-    --bg1: #071029;
-    --bg2: #10243a;
-    --accent: #00d9ff;
-    --card-radius: 16px;
-    --gap: 16px;
-    --shadow: 0 12px 35px rgba(0, 217, 255, 0.4);
-    --transition: 300ms cubic-bezier(.2, .9, .25, 1);
-  }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css?v=20250825" />
+    <title>گالری تصاویر سما خان</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-
-  body, html {
-    margin: 0;
-    padding: 28px;
-    font-family: "Tahoma", sans-serif;
-    background: linear-gradient(135deg, var(--bg1), var(--bg2));
-    color: #fff;
-    height: 100%;
-    -webkit-font-smoothing: antialiased;
-    user-select: none;
-  }
-
-  h1 {
-    text-align: center;
-    margin-bottom: 24px;
-    font-size: 28px;
-    letter-spacing: 0.6px;
-    color: #eafcff;
-    text-shadow: 0 6px 30px rgba(0,0,0,0.6);
-  }
-
-  .sama-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: var(--gap);
-  }
-
-  .sama-gallery .card {
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--card-radius);
-    box-shadow: var(--shadow);
-    cursor: zoom-in;
-    transition: transform var(--transition), box-shadow var(--transition);
-  }
-
-  .sama-gallery .card:hover,
-  .sama-gallery .card:focus-within {
-    transform: translateY(-10px) scale(1.06);
-    box-shadow: 0 30px 70px rgba(0, 217, 255, 0.7);
-    outline: none;
-  }
-
-  .sama-gallery img {
-    display: block;
-    width: 100%;
-    height: 270px;
-    object-fit: contain;
-    border-radius: var(--card-radius);
-    transition: transform 400ms ease;
-  }
-
-  .sama-gallery .card:hover img {
-    transform: scale(1.12) rotate(1deg);
-  }
-
-  /* Lightbox */
-  .lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(2,6,12,0.95);
-    backdrop-filter: blur(8px);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    padding: 20px;
-  }
-
-  .lightbox.active {
-    display: flex;
-  }
-
-  .lightbox img {
-    max-width: 90vw;
-    max-height: 90vh;
-    border-radius: 20px;
-    box-shadow: 0 0 50px var(--accent);
-    transition: transform 300ms ease;
-    user-select: none;
-  }
-
-  .lightbox .close-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background: var(--accent);
-    border: none;
-    color: #071029;
-    font-weight: bold;
-    font-size: 24px;
-    padding: 8px 14px;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 0 20px var(--accent);
-    transition: background 200ms ease;
-    z-index: 10000;
-  }
-
-  .lightbox .close-btn:hover {
-    background: #00a8cc;
-  }
-
-  /* Navigation arrows */
-  .nav-arrow {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 48px;
-    color: var(--accent);
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    user-select: none;
-    padding: 8px;
-    z-index: 10000;
-    transition: color 200ms ease;
-  }
-
-  .nav-arrow:hover {
-    color: #00a8cc;
-  }
-
-  .nav-prev {
-    left: 20px;
-  }
-
-  .nav-next {
-    right: 20px;
-  }
-
-  @media (max-width: 600px) {
-    .sama-gallery .card:hover img {
-      transform: none;
-    }
-
-    .lightbox .close-btn {
-      font-size: 20px;
-      padding: 6px 10px;
-      top: 10px;
-      left: 10px;
-    }
-
-    .nav-arrow {
-      font-size: 36px;
-      padding: 6px;
-    }
-
-    .nav-prev {
-      left: 10px;
-    }
-
-    .nav-next {
-      right: 10px;
-    }
-  }
-</style>
-</head>
-<body>
-<header class="header">
+  </head>
+  <body class="image-gallery-body">
+    <header class="header">
       <a href="https://samaxan.ir" class="logo">🎵 Sama Xan</a>
       <div class="menu-icon" onclick="toggleMenu()">
         <i class="bi bi-list"></i>
@@ -189,224 +25,293 @@
         <a href="#footer" class="menulink">پروفایل ها</a>
       </nav>
     </header>
-<h1>گالری تصاویر</h1>
+    <h1 class="image-gallery-page-h1 biohead">گالری تصاویر</h1>
+    <hr>
+    <!-- img box -->
+    <div class="sama-image-gallery-box" id="samaGallery" aria-label="گالری تصاویر" role="list">
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery1.jpg"
+          alt="سما خان عکس 1"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery2.jpg"
+          alt="سما خان عکس 2"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery3.jpg"
+          alt="سما خان عکس 3"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery4.jpg"
+          alt="سما خان عکس 4"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery5.jpg"
+          alt="سما خان عکس 5"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery6.jpg"
+          alt="سما خان عکس 6"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery7.jpg"
+          alt="سما خان عکس 7"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery8.jpg"
+          alt="سما خان عکس 8"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery9.jpg"
+          alt="سما خان عکس 9"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery10.jpg"
+          alt="سما خان عکس 10"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery11.jpg"
+          alt="سما خان عکس 11"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery12.jpg"
+          alt="سما خان عکس 12"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery13.jpg"
+          alt="سما خان عکس 13"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery14.jpg"
+          alt="سما خان عکس 14"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery15.jpg"
+          alt="سما خان عکس 15"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery16.jpg"
+          alt="سما خان عکس 16"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery17.jpg"
+          alt="سما خان عکس 17"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery18.jpg"
+          alt="سما خان عکس 18"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery19.jpg"
+          alt="سما خان عکس 19"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery20.jpg"
+          alt="سما خان عکس 20"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery21.jpg"
+          alt="سما خان عکس 21"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery22.jpg"
+          alt="سما خان عکس 22"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery23.jpg"
+          alt="سما خان عکس 23"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery24.jpg"
+          alt="سما خان عکس 24"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery25.jpg"
+          alt="سما خان عکس 25"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery26.jpg"
+          alt="سما خان عکس 26"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery27.jpg"
+          alt="سما خان عکس 27"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery28.jpg"
+          alt="سما خان عکس 28"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery29.jpg"
+          alt="سما خان عکس 29"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery30.jpg"
+          alt="سما خان عکس 30"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery31.jpg"
+          alt="سما خان عکس 31"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery32.jpg"
+          alt="سما خان عکس 32"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery33.jpg"
+          alt="سما خان عکس 33"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery34.jpg"
+          alt="سما خان عکس 34"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery35.jpg"
+          alt="سما خان عکس 35"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery36.jpg"
+          alt="سما خان عکس 36"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery37.jpg"
+          alt="سما خان عکس 37"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery38.jpg"
+          alt="سما خان عکس 38"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery39.jpg"
+          alt="سما خان عکس 39"
+          loading="lazy"
+        />
+      </div>
+      <div class="image-gallery-card" role="listitem" tabindex="0">
+        <img
+          src="https://samaxan.ir/img/samaxan-gallery40.jpg"
+          alt="سما خان عکس 40"
+          loading="lazy"
+        />
+      </div>
+    </div>
 
-<div class="sama-gallery" id="samaGallery" aria-label="گالری تصاویر" role="list">
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery1.jpg" alt="سما خان عکس 1" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery2.jpg" alt="سما خان عکس 2" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery3.jpg" alt="سما خان عکس 3" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery4.jpg" alt="سما خان عکس 4" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery5.jpg" alt="سما خان عکس 5" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery6.jpg" alt="سما خان عکس 6" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery7.jpg" alt="سما خان عکس 7" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery8.jpg" alt="سما خان عکس 8" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery9.jpg" alt="سما خان عکس 9" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery10.jpg" alt="سما خان عکس 10" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery11.jpg" alt="سما خان عکس 11" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery12.jpg" alt="سما خان عکس 12" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery13.jpg" alt="سما خان عکس 13" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery14.jpg" alt="سما خان عکس 14" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery15.jpg" alt="سما خان عکس 15" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery16.jpg" alt="سما خان عکس 16" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery17.jpg" alt="سما خان عکس 17" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery18.jpg" alt="سما خان عکس 18" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery19.jpg" alt="سما خان عکس 19" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery20.jpg" alt="سما خان عکس 20" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery21.jpg" alt="سما خان عکس 21" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery22.jpg" alt="سما خان عکس 22" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery23.jpg" alt="سما خان عکس 23" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery24.jpg" alt="سما خان عکس 24" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery25.jpg" alt="سما خان عکس 25" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery26.jpg" alt="سما خان عکس 26" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery27.jpg" alt="سما خان عکس 27" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery28.jpg" alt="سما خان عکس 28" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery29.jpg" alt="سما خان عکس 29" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery30.jpg" alt="سما خان عکس 30" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery31.jpg" alt="سما خان عکس 31" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery32.jpg" alt="سما خان عکس 32" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery33.jpg" alt="سما خان عکس 33" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery34.jpg" alt="سما خان عکس 34" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery35.jpg" alt="سما خان عکس 35" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery36.jpg" alt="سما خان عکس 36" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery37.jpg" alt="سما خان عکس 37" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery38.jpg" alt="سما خان عکس 38" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery39.jpg" alt="سما خان عکس 39" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery40.jpg" alt="سما خان عکس 40" loading="lazy" />
-  </div>
-  <div class="card" role="listitem" tabindex="0">
-    <img src="https://samaxan.ir/img/samaxan-gallery41.jpg" alt="سما خان عکس 41" loading="lazy" />
-  </div>
-</div>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
-  <button class="close-btn" id="closeBtn" aria-label="بستن">×</button>
-  <button class="nav-arrow nav-prev" id="prevBtn" aria-label="عکس قبلی">‹</button>
-  <img src="" alt="" id="lightboxImg" />
-  <button class="nav-arrow nav-next" id="nextBtn" aria-label="عکس بعدی">›</button>
-</div>
-
-<script>
-  const gallery = document.getElementById('samaGallery');
-  const cards = Array.from(gallery.querySelectorAll('.card'));
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
-  const closeBtn = document.getElementById('closeBtn');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-
-  let currentIndex = 0;
-
-  function openLightbox(index) {
-    currentIndex = index;
-    const img = cards[currentIndex].querySelector('img');
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
-    lightbox.classList.add('active');
-    lightbox.setAttribute('aria-hidden', 'false');
-    document.documentElement.style.overflow = 'hidden';
-    closeBtn.focus();
-  }
-
-  function closeLightbox() {
-    lightbox.classList.remove('active');
-    lightbox.setAttribute('aria-hidden', 'true');
-    document.documentElement.style.overflow = '';
-  }
-
-  function showPrev() {
-    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-    updateLightboxImage();
-  }
-
-  function showNext() {
-    currentIndex = (currentIndex + 1) % cards.length;
-    updateLightboxImage();
-  }
-
-  function updateLightboxImage() {
-    const img = cards[currentIndex].querySelector('img');
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
-  }
-
-  // Event Listeners
-  cards.forEach((card, idx) => {
-    card.addEventListener('click', () => openLightbox(idx));
-    card.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openLightbox(idx);
-      }
-    });
-  });
-
-  closeBtn.addEventListener('click', closeLightbox);
-  prevBtn.addEventListener('click', showPrev);
-  nextBtn.addEventListener('click', showNext);
-
-  // Keyboard navigation
-  document.addEventListener('keydown', e => {
-    if (!lightbox.classList.contains('active')) return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') showPrev();
-    if (e.key === 'ArrowRight') showNext();
-  });
-
-  // Swipe support for mobile
-  let touchStartX = 0;
-  lightboxImg.addEventListener('touchstart', e => {
-    touchStartX = e.touches[0].clientX;
-  });
-  lightboxImg.addEventListener('touchend', e => {
-    let touchEndX = e.changedTouches[0].clientX;
-    let diffX = touchEndX - touchStartX;
-    if (Math.abs(diffX) > 40) {
-      if (diffX > 0) showPrev();
-      else showNext();
-    }
-  });
-</script>
-  <footer id="footer" class="footer">
+    <footer id="footer" class="image-gallery-footer footer">
       <div class="column">
         <div class="logo">sama xan</div>
         <p>وب سایت رسمی سما خان</p>
@@ -432,5 +337,5 @@
       </div>
       <div class="copyright">© 2025 Sama xan</div>
     </footer>
-</body>
+  </body>
 </html>

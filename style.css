@@ -335,13 +335,6 @@ nav a:hover {
 }
 
 /*  فوتر وبسایت */
-footer {
-  margin-top: 100px;
-  padding: 25px;
-  font-size: 13px;
-  background-color: #1f2937;
-  color: #aaa;
-}
 
 .social-icons i {
   font-size: 24px;
@@ -808,13 +801,6 @@ footer {
   gap: 10px;
 }
 
-.footer .logo {
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #f9c74f;
-}
-
 .footer .nav-links {
   margin: 20px 0;
 }
@@ -837,7 +823,7 @@ footer {
 
 .footer .social-icons a {
   color: #f0f0f0;
-  margin: 0 10px;
+  margin: 0 15px 0 0;
   font-size: 20px;
   transition: 0.3s ease;
 }
@@ -845,12 +831,6 @@ footer {
 .footer .social-icons a:hover {
   color: #f9c74f;
   transform: scale(1.2);
-}
-
-.footer .copyright {
-  margin-top: 30px;
-  font-size: 13px;
-  color: #aaa;
 }
 
 .footer {
@@ -894,11 +874,6 @@ footer {
 .footer .nav-links a:hover,
 .footer .social-icons a:hover {
   color: #00ffff;
-}
-
-.footer .social-icons a {
-  margin-right: 15px;
-  font-size: 20px;
 }
 
 .footer .copyright {
@@ -1078,6 +1053,141 @@ main.track-page {
   text-align: justify;
   white-space: initial;
   line-height: 2rem;
+}
+
+/* صفحه گالری تصاویر */
+.image-gallery-body {
+  margin: 0;
+  padding: 0;
+  font-family: "Tahoma", sans-serif;
+  background: linear-gradient(135deg, #071029, #10243a);
+  color: #fff;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+.image-gallery-page-h1 {
+  margin: 50px auto 0 auto;
+  font-size: 30px;
+  letter-spacing: 0.6px;
+  color: #eafcff;
+  text-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+  width: 90%;
+}
+
+hr {
+  width: 85%;
+  border: 1px solid #00ffff;
+  mask: linear-gradient(to right, transparent, #000 40% 60%, transparent);
+}
+
+.sama-image-gallery-box {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1100;
+  flex-wrap: wrap;
+  gap: 90px 30px;
+  padding: 0;
+}
+
+.image-gallery-card {
+  border-radius: 20px;
+  width: 20%;
+  height: 250px;
+  padding: 20px;
+  background-color: #ffffffa2;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: 0.4s;
+  animation: floatCard 1s ease-in-out;
+  border: 1px solid #fff;
+}
+.image-gallery-card:hover {
+  rotate: 3deg;
+}
+
+.sama-image-gallery-box img {
+  display: block;
+  width: 100%;
+  max-height: 270px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
+}
+.sama-image-gallery-box img:hover {
+  scale: 1.05;
+  rotate: -3deg;
+}
+
+/* video manage page */
+
+.video-manage-page{
+  background-image: linear-gradient(to left, #000 20%, #00ffff );
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.form-container form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  z-index: 999999999999;
+  background: #ffffff46;
+  backdrop-filter: blur(60px);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #fff;
+  gap: 10px;
+}
+
+.form-container form input {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.form-container form input:focus {
+  transition: .4s ease;
+  outline: none;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+.form-container form button {
+  padding: 0.6rem 1.5rem;
+  background: #ffc235;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-container form h2{
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.error {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.particles-js-canvas-el {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  inset: 0;
 }
 
 /* ریسپانسیو */
@@ -1385,14 +1495,34 @@ main.track-page {
   .track-footer {
     margin-top: 0px;
   }
-  .track-page-audio{
+  .track-page-audio {
     width: 100%;
     box-shadow: 0px 0px 40px rgb(0 0 0 / 24%);
   }
-  .btn-download{
+  .btn-download {
     width: 100%;
   }
-  .player-single{
+  .player-single {
     margin: 2rem auto 1rem auto;
+  }
+
+  .sama-image-gallery-box .card:hover img {
+    transform: none;
+  }
+
+  .image-gallery-page-h1 {
+    margin-bottom: -20px;
+  }
+
+  .sama-image-gallery-box {
+    margin: 50px 0 150px 0;
+    gap: 100px;
+  }
+  .image-gallery-card {
+    width: 85%;
+    height: 300px;
+  }
+  .sama-image-gallery-box img {
+    max-height: 400px;
   }
 }
