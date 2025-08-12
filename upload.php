@@ -145,308 +145,15 @@ $files = array_diff(scandir($targetDir), ['.', '..']);
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
+<link rel="stylesheet" href="style.css?v=20250825">
 <meta charset="UTF-8" />
 <title>آپلود و مدیریت آهنگ‌ها</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<style>
-  /* Reset اولیه برای ثبات در همه مرورگرها */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-/* بدنه صفحه */
-body {
-  font-family: 'Tahoma', sans-serif;
-  background: #f9fafb;
-  color: #333;
-  direction: rtl;
-  padding: 20px 15px;
-  min-height: 100vh;
-}
-
-/* تیتر صفحه */
-h1 {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 30px;
-  color: #2c3e50;
-}
-
-/* فرم آپلود */
-form {
-  max-width: 700px;
-  background: #ffffff;
-  margin: 0 auto 40px auto;
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.07);
-}
-
-/* برچسب‌ها */
-form label {
-  display: block;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #34495e;
-  margin-bottom: 10px;
-  user-select: none;
-}
-
-/* ورودی‌ها و textarea */
-input[type="text"], textarea, input[type="file"] {
-  width: 100%;
-  padding: 14px 18px;
-  border: 1.8px solid #bdc3c7;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  font-family: 'Tahoma', sans-serif;
-  resize: vertical;
-  color: #2c3e50;
-  margin-bottom: 22px;
-}
-
-input[type="text"]:focus, textarea:focus, input[type="file"]:focus {
-  border-color: #27ae60;
-  box-shadow: 0 0 8px #27ae6050;
-  outline: none;
-}
-
-/* دکمه */
-button {
-  background-color: #27ae60;
-  color: white;
-  border: none;
-  padding: 14px 30px;
-  font-size: 1.1rem;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  user-select: none;
-}
-button:hover {
-  background-color: #219150;
-}
-
-/* پیام‌ها */
-.message {
-  max-width: 700px;
-  margin: 15px auto 40px auto;
-  font-weight: 700;
-  font-size: 1.1rem;
-  text-align: center;
-  word-break: break-word;
-  padding: 15px 20px;
-  border-radius: 10px;
-}
-
-.message.error {
-  background-color: #fcebea;
-  color: #e74c3c;
-  border: 1.5px solid #e74c3c;
-}
-
-.message.success {
-  background-color: #e8f6e8;
-  color: #27ae60;
-  border: 1.5px solid #27ae60;
-}
-
-/* جدول */
-table {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto 50px auto;
-  border-collapse: collapse;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-  border-radius: 12px;
-  overflow: hidden;
-  font-size: 0.95rem;
-  background-color: white;
-}
-
-/* ردیف‌های جدول */
-thead tr {
-  background-color: #27ae60;
-  color: white;
-  font-weight: 700;
-  font-size: 1rem;
-}
-thead th, tbody td {
-  padding: 14px 12px;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-  vertical-align: middle;
-}
-
-/* ردیف‌های زوج */
-tbody tr:nth-child(even) {
-  background-color: #f4f9f4;
-}
-
-/* ستون متن آهنگ */
-td.lyrics {
-  max-width: 300px;
-  white-space: pre-wrap;
-  text-align: right;
-  direction: rtl;
-  font-family: Tahoma, sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  word-break: break-word;
-}
-
-/* ستون پلیر */
-td.audio-cell {
-  width: 220px;
-  padding: 8px 12px;
-}
-
-/* پلیر */
-audio {
-  width: 100%;
-  max-width: 220px;
-  height: 32px;
-  outline: none;
-  border-radius: 6px;
-  background-color: #eee;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-  display: block;
-  margin: 0 auto;
-}
-
-/* لینک‌های عملیات */
-a.button-link {
-  display: inline-block;
-  background-color: #27ae60;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin: 2px 5px;
-  text-decoration: none;
-  user-select: none;
-  transition: background-color 0.3s ease;
-}
-a.button-link:hover {
-  background-color: #219150;
-}
-a.button-link.delete {
-  background-color: #e74c3c;
-}
-a.button-link.delete:hover {
-  background-color: #c0392b;
-}
-
-/* فرم ویرایش */
-.edit-form {
-  max-width: 700px;
-  margin: 30px auto 40px auto;
-  background: #fff3cd;
-  border: 1.5px solid #ffeeba;
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-sizing: border-box;
-}
-.edit-form h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-weight: 700;
-  color: #856404;
-  font-size: 1.4rem;
-}
-.edit-form a {
-  font-size: 0.9rem;
-  color: #555;
-  text-decoration: underline;
-  margin-right: 15px;
-  word-break: break-word;
-}
-
-/* ریسپانسیو */
-
-/* موبایل تا 480px */
-@media (max-width: 480px) {
-  body {
-    padding: 15px 10px;
-  }
-  h1 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-  }
-  form, .edit-form {
-    padding: 20px 20px;
-  }
-  input[type="text"], textarea, input[type="file"], button, a.button-link {
-    font-size: 1rem;
-    padding: 12px 15px;
-  }
-  button {
-    width: 100%;
-  }
-  table {
-    font-size: 0.85rem;
-    margin-bottom: 30px;
-    max-width: 100%;
-    overflow-x: auto;
-    display: block;
-  }
-  thead tr {
-    display: table-row;
-  }
-  tbody tr {
-    display: table-row;
-  }
-  td.audio-cell {
-    width: 100%;
-    padding: 10px 5px;
-  }
-  td.lyrics {
-    max-width: 100%;
-    font-size: 0.9rem;
-  }
-  audio {
-    max-width: 100%;
-    height: 35px;
-  }
-  a.button-link {
-    font-size: 0.95rem;
-    padding: 8px 14px;
-  }
-  .message {
-    font-size: 1rem;
-    padding: 12px 15px;
-  }
-}
-
-/* تبلت تا 768px */
-@media (max-width: 768px) {
-  form, .edit-form {
-    padding: 22px 24px;
-  }
-  table {
-    max-width: 100%;
-    font-size: 0.9rem;
-  }
-  td.audio-cell {
-    width: 180px;
-  }
-  audio {
-    max-width: 180px;
-    height: 32px;
-  }
-}
-
-</style>
 </head>
 <body>
 
-<h1 style="text-align:center;">آپلود و مدیریت آهنگ‌ها</h1>
+<h1 style="text-align:center;" class="upload-h1">آپلود و مدیریت آهنگ‌ها</h1>
 
 <?php if (!empty($error)) : ?>
   <div class="message error"><?= htmlspecialchars($error) ?></div>
@@ -459,7 +166,7 @@ a.button-link.delete:hover {
 <?php endif; ?>
 
 <!-- فرم آپلود جدید -->
-<form method="post" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data" class="upload-form">
   <label>عنوان آهنگ (الزامی):</label><br />
   <input type="text" name="title" placeholder="عنوان آهنگ را وارد کنید" required /><br />
 
@@ -496,7 +203,7 @@ if (isset($_GET['edit'])):
     <label>کاور آهنگ (اختیاری، فقط jpg/png/webp):</label><br />
     <input type="file" name="cover_edit" accept="image/*"><br />
     <button type="submit" name="edit">ثبت تغییرات</button>
-    <a href="upload.php" style="margin-left: 10px; color: #555;">انصراف</a>
+    <a href="upload.php" style="margin-left: 10px; color: #555;" class="button-form">انصراف</a>
   </form>
 <?php endif; ?>
 
@@ -505,9 +212,7 @@ if (isset($_GET['edit'])):
   <thead>
     <tr>
       <th>نام فایل</th>
-      <th>عنوان آهنگ</th>
       <th>کاور</th>
-      <th>پخش</th>
       <th>متن آهنگ</th>
       <th>عملیات</th>
     </tr>
@@ -533,24 +238,22 @@ if (isset($_GET['edit'])):
     ?>
     <tr>
       <td><?= htmlspecialchars($file) ?></td>
-      <td><?= htmlspecialchars($title) ?></td>
       <td>
         <?php if ($coverPath): ?>
-          <img src="<?= htmlspecialchars($coverPath) ?>" alt="کاور" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px;" />
-        <?php else: ?>
-          -
+          <img src="<?= htmlspecialchars($coverPath) ?>" alt="کاور" style="width: 200px; height: 200px; object-fit: cover; border-radius: 8px;" />
         <?php endif; ?>
       </td>
-      <td class="audio-cell">
+
+      <td class="upload-lyrics"><?= nl2br(htmlspecialchars($lyrics)) ?></td>
+      <td>
+        <a href="?edit=<?= urlencode($file) ?>" class="button-link">ویرایش</a>
+        <a href="?delete=<?= urlencode($file) ?>" onclick="return confirm('آیا از حذف این آهنگ مطمئن هستید؟');" class="button-link delete">حذف</a>
+      </td>
+            <td class="audio-cell">
         <audio controls>
           <source src="<?= htmlspecialchars($targetDir . $file) ?>" type="audio/<?= htmlspecialchars(pathinfo($file, PATHINFO_EXTENSION)) ?>">
           مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
         </audio>
-      </td>
-      <td class="lyrics"><?= nl2br(htmlspecialchars($lyrics)) ?></td>
-      <td>
-        <a href="?edit=<?= urlencode($file) ?>" class="button-link">ویرایش</a>
-        <a href="?delete=<?= urlencode($file) ?>" onclick="return confirm('آیا از حذف این آهنگ مطمئن هستید؟');" class="button-link delete">حذف</a>
       </td>
     </tr>
     <?php endforeach; ?>

@@ -42,116 +42,11 @@ sort($audioFiles);
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="style.css?v=20250824" />
-  <style>
-    body {
-      font-family: 'Vazirmatn', sans-serif;
-      background: #f9f9f9;
-      padding: 20px;
-      direction: rtl;
-      color: #333;
-      margin: 0;
-    }
-    .video-page-h1 {
-      text-align: center;
-      color: #f9c74f;
-      margin-bottom: 30px;
-      font-weight: 800;
-      font-size: 2.4rem;
-      text-shadow: 0 0 3px #b8921a;
-    }
-    .video-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 25px;
-      max-width: 1100px;
-      margin: 0 auto 40px auto;
-    }
-    .video-item {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      padding: 15px 20px 25px 20px;
-      text-align: center;
-      transition: box-shadow 0.3s ease;
-    }
-    .video-item:hover {
-      box-shadow: 0 6px 25px rgba(0,0,0,0.2);
-    }
-    .video-title {
-      font-weight: 700;
-      margin-bottom: 15px;
-      color: #121212;
-      font-size: 1.25rem;
-      min-height: 52px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 5px;
-      line-height: 1.2;
-    }
-    .video-embed iframe,
-    .video-embed video {
-      width: 100%;
-      max-height: 230px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-   
-    /* Footer */
-    .footer {
-      background: #121212;
-      color: #f9c74f;
-      padding: 1.5rem 2rem;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-    .footer .logo {
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      font-size: 1.2rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-    .footer .nav-links a,
-    .footer .social-icons a {
-      color: #f9c74f;
-      margin: 0 8px;
-      text-decoration: none;
-      font-size: 1.3rem;
-      transition: color 0.3s ease;
-    }
-    .footer .nav-links a:hover,
-    .footer .social-icons a:hover {
-      color: #fff;
-    }
-    .footer .social-icons a {
-      margin-left: 12px;
-    }
-    /* Responsive */
-    @media (max-width: 768px) {
-      .video-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      }
-      .video-embed iframe,
-      .video-embed video {
-        max-height: 180px;
-      }
-      .header {
-        padding: 12px 15px;
-      }
-      .header .logo {
-        font-size: 1.5rem;
-      }
-      #navMenu a {
-        margin-left: 12px;
-        font-size: 0.95rem;
-      }
-    }
-  </style>
+
 </head>
 <body>
 
-<header class="header">
+    <header class="header">
       <a href="https://samaxan.ir" class="logo">🎵 Sama Xan</a>
       <div class="menu-icon" onclick="toggleMenu()">
         <i class="bi bi-list"></i>
@@ -159,13 +54,14 @@ sort($audioFiles);
       <nav id="navMenu">
         <a href="https://samaxan.ir/bio.html" class="menulink">بیوگرافی</a>
         <a href="https://samaxan.ir/player.php" class="menulink">آهنگ‌ها</a>
-        <a href="#posts" class="menulink">پست‌ها</a>
+        <a href="#posts" class="https://samaxan.ir/image-gallery">گالری تصاویر</a>
         <a href="#footer" class="menulink">پروفایل ها</a>
       </nav>
-</header>
+    </header>
+
+<h1 class="video-page-h1">گالری موزیک ویدیوها</h1>
 
 <main id="video-gallery" class="video-gallery">
-  <h1 class="video-page-h1">گالری موزیک ویدیوها</h1>
 
   <?php foreach ($audioFiles as $file):
     $baseName = pathinfo($file, PATHINFO_FILENAME);
@@ -191,32 +87,33 @@ sort($audioFiles);
 
 </main>
 
-<footer id="footer" class="footer">
-  <div class="logo">sama xan</div>
-  <p>© 2025 Sama xan | وب سایت رسمی سما خان</p>
-  <div class="nav-links">
-    <a href="https://samaxan.ir/bio.html">بیوگرافی</a>
-    <a href="https://samaxan.ir/player.php">آهنگ‌ها</a>
-    <a href="#video-gallery">گالری ویدیو</a>
-  </div>
-  <div class="social-icons">
-    <a href="https://www.instagram.com/samaxaaan"><i class="bi bi-instagram"></i></a>
-    <a href="https://t.me/samaxanmusic1"><i class="bi bi-telegram"></i></a>
-    <a href="https://www.tiktok.com/@samaxaaan"><i class="bi bi-tiktok"></i></a>
-    <a href="https://m.youtube.com/@samaxaaan"><i class="bi bi-youtube"></i></a>
-  </div>
-</footer>
-
-<script>
-function toggleMenu() {
-  const navMenu = document.getElementById('navMenu');
-  if (navMenu.style.display === 'flex') {
-    navMenu.style.display = 'none';
-  } else {
-    navMenu.style.display = 'flex';
-  }
-}
-</script>
+   <footer id="footer" class="footer">
+      <div class="column">
+        <div class="logo">sama xan</div>
+        <p>وب سایت رسمی سما خان</p>
+      </div>
+      <div class="column nav-links">
+        <h4 style="color: #f9c74f">صفحات</h4>
+        <a href="https://samaxan.ir/bio.html">بیوگرافی</a><br />
+        <a href="">تست</a><br />
+        <a href="">تست</a><br />
+      </div>
+      <div class="column social-icons">
+        <h4 style="color: #f9c74f">پروفایل ها</h4>
+        <a href="https://www.instagram.com/samaxaaan"
+          ><i class="bi bi-instagram"></i
+        ></a>
+        <a href="https://t.me/samaxanmusic1"><i class="bi bi-telegram"></i></a>
+        <a href="https://www.tiktok.com/@samaxaaan"
+          ><i class="bi bi-tiktok"></i
+        ></a>
+        <a href="https://m.youtube.com/@samaxaaan"
+          ><i class="bi bi-youtube"></i
+        ></a>
+      </div>
+      <div class="copyright">© 2025 Sama xan</div>
+    </footer>
+    <script src="script.js?v=20250806"></script>
 
 </body>
 </html>

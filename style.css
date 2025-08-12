@@ -317,6 +317,7 @@ nav a:hover {
 }
 
 @keyframes pulseGlow {
+
   0%,
   100% {
     box-shadow: 0 0 20px #00ffff;
@@ -1105,6 +1106,7 @@ hr {
   animation: floatCard 1s ease-in-out;
   border: 1px solid #fff;
 }
+
 .image-gallery-card:hover {
   rotate: 3deg;
 }
@@ -1118,6 +1120,7 @@ hr {
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease;
 }
+
 .sama-image-gallery-box img:hover {
   scale: 1.05;
   rotate: -3deg;
@@ -1125,8 +1128,8 @@ hr {
 
 /* video manage page */
 
-.video-manage-page{
-  background-image: linear-gradient(to left, #000 20%, #00ffff );
+.video-manage-page {
+  background-image: linear-gradient(to left, #000 20%, #00ffff);
 }
 
 .form-container {
@@ -1158,11 +1161,13 @@ hr {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
+
 .form-container form input:focus {
   transition: .4s ease;
   outline: none;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
 }
+
 .form-container form button {
   padding: 0.6rem 1.5rem;
   background: #ffc235;
@@ -1172,7 +1177,7 @@ hr {
   cursor: pointer;
 }
 
-.form-container form h2{
+.form-container form h2 {
   margin: 0 0 20px 0;
   padding: 0;
 }
@@ -1188,6 +1193,411 @@ hr {
   position: absolute;
   z-index: 0;
   inset: 0;
+}
+
+/* video page style */
+.video-page-h2 {
+  font-size: 2.5rem;
+  margin-bottom: 80px;
+}
+
+/* ویدیوها */
+.video-grid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px
+}
+
+.video-page-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  background-color: #0f2027;
+  position: relative;
+  width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px #1c1c1c;
+  backdrop-filter: blur(30px);
+}
+
+.video-page-box video {
+  border-radius: 20px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: -50px;
+  background-color: #ffffff03;
+  backdrop-filter: blur(50px);
+}
+
+/* دکمه‌ها */
+.news-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.news-buttons a {
+  background: #ffc641;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.news-buttons a:hover {
+  background: #f9c74f;
+}
+
+.news-section {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.video-section {
+  padding: 20px;
+  max-width: 100%;
+  margin: auto;
+}
+
+
+/* videos.php page */
+.video-page-h1 {
+  text-align: center;
+  color: #f9c74f;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  font-weight: 800;
+  font-size: 2.4rem;
+  text-shadow: 0 0 3px #b8921a;
+}
+
+.video-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.video-item {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px 25px 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  width: 350px;
+}
+
+.video-item:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.video-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #121212;
+  font-size: 1.25rem;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  line-height: 1.2;
+}
+
+.video-embed iframe,
+.video-embed video {
+  width: 100%;
+  max-height: 230px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* upload page style */
+
+.upload-h1 {
+  color: #fff;
+  margin: 50px auto 20px auto;
+}
+
+/* فرم آپلود */
+.upload-form {
+  max-width: 700px;
+  background: #ffffff;
+  margin: 0 auto 40px auto;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+/* برچسب‌ها */
+.upload-form label {
+  display: block;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #34495e;
+  margin-bottom: 10px;
+  user-select: none;
+}
+
+/* ورودی‌ها و textarea */
+.upload-form input[type="text"],
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1.8px solid #bdc3c7;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  resize: vertical;
+  color: #2c3e50;
+  margin-bottom: 22px;
+}
+
+.upload-form input[type="text"]:focus,
+textarea:focus,
+input[type="file"]:focus {
+  border-color: #27ae60;
+  box-shadow: 0 0 8px #27ae6050;
+  outline: none;
+}
+
+/* دکمه */
+.upload-form button {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  user-select: none;
+}
+
+.upload-form button:hover {
+  background-color: #219150;
+}
+
+/* پیام‌ها */
+.message {
+  max-width: 700px;
+  margin: 15px auto 40px auto;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: center;
+  word-break: break-word;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.message.error {
+  background-color: #fcebea;
+  color: #e74c3c;
+  border: 1.5px solid #e74c3c;
+}
+
+.message.success {
+  background-color: #e8f6e8;
+  color: #27ae60;
+  border: 1.5px solid #27ae60;
+}
+
+/* جدول */
+table {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 50px auto;
+  border-collapse: collapse;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 0.95rem;
+  background-color: white;
+}
+
+/* ردیف‌های جدول */
+thead tr {
+  background-color: #27ae60;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+thead tr th {
+  padding: 14px 12px;
+  text-align: center;
+  vertical-align: middle;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: none;
+}
+
+tbody tr {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+thead th,
+tbody td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* ردیف‌های زوج */
+tbody tr:nth-child(even) {
+  background-color: #f4f9f4;
+}
+
+/* ستون متن آهنگ */
+td.upload-lyrics {
+  margin: 10px auto;
+  white-space: nowrap;
+  text-align: justify;
+  font-size: 0.95rem;
+  line-height: 2rem;
+  color: #000;
+  border: 1px solid #ccc;
+  overflow-y: scroll;
+  flex-grow: 1;
+  max-height: 200px;
+  border-radius: 20px;
+  text-overflow: ellipsis;
+}
+
+/* ستون پلیر */
+td.audio-cell {
+  padding: 8px 12px;
+  flex-grow: 2;
+  width: 100%;
+}
+
+/* پلیر */
+.audio-cell audio {
+  width: 100%;
+  max-width: 350px;
+  height: 50px;
+  outline: none;
+  border-radius: 50px;
+  background-color: #eee;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
+}
+
+tbody tr td {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: calc(25% - 20px);
+  border: none;
+  color: #000;
+}
+
+/* لینک‌های عملیات */
+a.button-link {
+  display: inline-block;
+  background-color: #27ae60;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 2px 5px;
+  text-decoration: none;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+a.button-link:hover {
+  background-color: #219150;
+}
+
+a.button-link.delete {
+  background-color: #e74c3c;
+}
+
+a.button-link.delete:hover {
+  background-color: #c0392b;
+}
+
+/* فرم ویرایش */
+.edit-form {
+  max-width: 700px;
+  margin: 30px auto 40px auto;
+  background: #fff3cd;
+  border: 1.5px solid #ffeeba;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.edit-form h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #856404;
+  font-size: 1.4rem;
+}
+
+.edit-form a {
+  font-size: 0.9rem;
+  color: #fff;
+  text-decoration: underline;
+  margin-right: 15px;
+  word-break: break-word;
+}
+
+a.button-form{
+  padding: 15px 25px;
+  border: none;
+  background-color: #ffc235;
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.edit-form button{
+  padding: 15px 25px;
+  border: none;
+  background-color: #219150;
+  color: #000;
+  border-radius: 20px;
 }
 
 /* ریسپانسیو */
@@ -1436,10 +1846,12 @@ hr {
     font-size: 1.3rem;
     display: block;
   }
+
   .music-list {
     justify-content: center;
     margin: 0px;
   }
+
   .music-item {
     width: 330px;
   }
@@ -1463,9 +1875,11 @@ hr {
   .player-footer {
     padding-bottom: 195px;
   }
+
   .player-page-logo {
     font-size: 1.3rem;
   }
+
   .bi-list {
     display: flex;
   }
@@ -1485,9 +1899,11 @@ hr {
     gap: 5px;
     font-weight: 700;
   }
+
   .meta-box span {
     text-align: right;
   }
+
   .share-buttons a {
     font-size: 1rem;
   }
@@ -1495,13 +1911,16 @@ hr {
   .track-footer {
     margin-top: 0px;
   }
+
   .track-page-audio {
     width: 100%;
     box-shadow: 0px 0px 40px rgb(0 0 0 / 24%);
   }
+
   .btn-download {
     width: 100%;
   }
+
   .player-single {
     margin: 2rem auto 1rem auto;
   }
@@ -1518,11 +1937,117 @@ hr {
     margin: 50px 0 150px 0;
     gap: 100px;
   }
+
   .image-gallery-card {
     width: 85%;
     height: 300px;
   }
+
   .sama-image-gallery-box img {
     max-height: 400px;
+  }
+
+  .video-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .video-embed iframe,
+  .video-embed video {
+    max-height: 180px;
+  }
+
+  .header {
+    padding: 12px 15px;
+  }
+
+  .header .logo {
+    font-size: 1.5rem;
+  }
+
+  #navMenu a {
+    margin-left: 12px;
+    font-size: 0.95rem;
+  }
+
+  .upload-h1 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .upload-form,
+  .edit-form {
+    padding: 20px 20px;
+  }
+
+  .upload-form input[type="text"],
+  textarea,
+  input[type="file"],
+  button,
+  a.button-link {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+
+  .upload-form button {
+    width: 100%;
+  }
+
+  table {
+    font-size: 0.85rem;
+    margin-bottom: 30px;
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+
+  thead {
+    display: none;
+
+  }
+
+  tbody tr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  td.audio-cell {
+    width: 100%;
+    padding: 10px 5px;
+  }
+
+  td.lyrics {
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  audio {
+    max-width: 100%;
+    height: 35px;
+  }
+
+  a.button-link {
+    font-size: 0.95rem;
+    padding: 8px 14px;
+  }
+
+  .message {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+
+  .upload-lyrics {
+    max-height: 170px;
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
