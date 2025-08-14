@@ -24,7 +24,8 @@
   <nav id="navMenu">
     <a href="https://samaxan.ir/bio.html" class="menulink">بیوگرافی</a>
     <a href="https://samaxan.ir/player.php" class="menulink">آهنگ‌ها</a>
-    <a href="#posts" class="menulink">پست‌ها</a>
+    <a href="https://samaxan.ir/image-gallery" class="posts">گالری تصاویر</a>
+    <a href="https://samaxan.ir/program-news.html" class="program-news">اخبار و برنامه ها</a>
     <a href="#footer" class="menulink">پروفایل ها</a>
   </nav>
   <div class="contactme">
@@ -150,26 +151,32 @@ document.getElementById("searchInput").addEventListener("input", function() {
 </script>
 
 <!-- فوتر -->
-<footer id="footer" class="footer player-footer">
-  <div class="column">
-    <div class="logo">sama xan</div>
-    <p>وب سایت رسمی سما خان</p>
-  </div>
-  <div class="column nav-links">
-    <h4 style="color: #f9c74f">صفحات</h4>
-    <a href="https://pedramfaizi.ir/sama/home.htm">تست</a><br />
-    <a href="https://pedramfaizi.ir/sama/index.ph">تست</a><br />
-    <a href="https://pedramfaizi.ir/sama/posts.ph">تست</a><br />
-  </div>
-  <div class="column social-icons">
-    <h4 style="color: #f9c74f">پروفایل ها</h4>
-    <a href="https://www.instagram.com/samaxaaan"><i class="bi bi-instagram"></i></a>
-    <a href="https://t.me/samaxanmusic1"><i class="bi bi-telegram"></i></a>
-    <a href="https://www.tiktok.com/@samaxaaan"><i class="bi bi-tiktok"></i></a>
-    <a href="https://m.youtube.com/@samaxaaan"><i class="bi bi-youtube"></i></a>
-  </div>
-  <div class="copyright">© 2025 Sama xan</div>
-</footer>
+<footer id="footer" class="footer">
+      <div class="column">
+        <div class="logo">sama xan</div>
+        <p>وب سایت رسمی سما خان</p>
+      </div>
+      <div class="column nav-links">
+        <h4 style="color: #f9c74f">صفحات</h4>
+        <a href="https://samaxan.ir/bio.html">بیوگرافی</a><br />
+        <a href="https://samaxan.ir/player.php">آهنگ ها</a><br />
+        <a href="https://samaxan.ir/image-gallery">گالری تصاویر</a><br />
+      </div>
+      <div class="column social-icons">
+        <h4 style="color: #f9c74f">پروفایل ها</h4>
+        <a href="https://www.instagram.com/samaxaaan"
+          ><i class="bi bi-instagram"></i
+        ></a>
+        <a href="https://t.me/samaxanmusic1"><i class="bi bi-telegram"></i></a>
+        <a href="https://www.tiktok.com/@samaxaaan"
+          ><i class="bi bi-tiktok"></i
+        ></a>
+        <a href="https://m.youtube.com/@samaxaaan"
+          ><i class="bi bi-youtube"></i
+        ></a>
+      </div>
+      <div class="copyright">© 2025 Sama xan</div>
+    </footer>
     <script src="script.js?v=20250821"></script>
 </body>
 </html>

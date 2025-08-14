@@ -196,13 +196,15 @@ if (isset($_GET['edit'])):
   <form method="post" enctype="multipart/form-data" class="edit-form">
     <h2>ویرایش آهنگ: <?= htmlspecialchars($fileToEdit) ?></h2>
     <input type="hidden" name="file" value="<?= htmlspecialchars($fileToEdit) ?>" />
-    <label>عنوان آهنگ:</label><br />
-    <input type="text" name="title_edit" value="<?= htmlspecialchars($currentTitle) ?>" required /><br />
+    <div class="form-song-name">
+      <label>عنوان آهنگ:</label><br />
+      <input type="text" name="title_edit" value="<?= htmlspecialchars($currentTitle) ?>" required /><br />
+    </div>
     <label>متن آهنگ:</label><br />
     <textarea name="lyrics_edit"><?= htmlspecialchars($currentLyrics) ?></textarea><br />
     <label>کاور آهنگ (اختیاری، فقط jpg/png/webp):</label><br />
-    <input type="file" name="cover_edit" accept="image/*"><br />
-    <button type="submit" name="edit">ثبت تغییرات</button>
+    <input class="input-upload" type="file" name="cover_edit" accept="image/*"><br />
+    <button class="btn-submit" type="submit" name="edit">ثبت تغییرات</button>
     <a href="upload.php" style="margin-left: 10px; color: #555;" class="button-form">انصراف</a>
   </form>
 <?php endif; ?>

@@ -442,6 +442,16 @@ nav a:hover {
   animation: mynewglow 1s cubic-bezier(0.215, 0.61, 0.355, 1) infinite alternate;
 }
 
+.en-page-circle {
+  left: 20px;
+  top: -20px;
+}
+
+.en-page-img {
+  right: 20px;
+  left: initial;
+}
+
 @keyframes mynewglow {
   0% {
     scale: 1;
@@ -1561,18 +1571,29 @@ a.button-link.delete:hover {
 .edit-form {
   max-width: 700px;
   margin: 30px auto 40px auto;
-  background: #fff3cd;
+  background: linear-gradient(to right,#0f2027 #1f2937 ) ;
   border: 1.5px solid #ffeeba;
   padding: 25px 30px;
   border-radius: 12px;
   box-sizing: border-box;
 }
+.edit-form textarea{
+  margin-top: 10px;
+  height: 150px;
+}
 
+.edit-form .input-upload{
+  margin-top: 10px;
+}
+
+.edit-form label{
+  margin-bottom: -10px;
+}
 .edit-form h2 {
-  margin-top: 0;
+  margin-top: 10px;
   margin-bottom: 20px;
   font-weight: 700;
-  color: #856404;
+  color: #fff;
   font-size: 1.4rem;
 }
 
@@ -1584,7 +1605,7 @@ a.button-link.delete:hover {
   word-break: break-word;
 }
 
-a.button-form{
+a.button-form {
   padding: 15px 25px;
   border: none;
   background-color: #ffc235;
@@ -1592,12 +1613,28 @@ a.button-form{
   border-radius: 20px;
   text-decoration: none;
 }
-.edit-form button{
+
+.btn-submit {
+  color: #fff;
   padding: 15px 25px;
   border: none;
-  background-color: #219150;
-  color: #000;
+  background-color: #2b5f1b;
   border-radius: 20px;
+  text-decoration: none;
+}
+
+.form-song-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.form-song-name input{
+  padding: 10px 15px;
+  border: 1px solid #eee;
+  border-radius: 20px;
+
 }
 
 /* ریسپانسیو */
@@ -1977,6 +2014,7 @@ a.button-form{
   .upload-form,
   .edit-form {
     padding: 20px 20px;
+    border: none;
   }
 
   .upload-form input[type="text"],
