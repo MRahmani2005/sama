@@ -1,11 +1,11 @@
 <?php
 // ====== تنظیمات پایه ======
-$base = 'https://https://samaxan.ir'; // ← دامنه نهایی سایتت
+$base = 'https://samaxan.ir/'; // ← دامنه نهایی سایتت
 $root = __DIR__;
 
 // دایرکتوری‌ها و فایل‌هایی که نباید وارد سایت‌مپ شوند
-$excludeDirs = ['assets','css','js','img','images','admin','includes','uploads','fonts','.git','covers','lyrics','titles','video-links'];
-$excludeFiles = ['404.php','403.php','500.php','sitemap.xml','sitemap_index.xml','generate-sitemap.php','robots.txt','error_log'];
+$excludeDirs = ['assets','css','js','img','images','vendor','node_modules','admin','includes','partials','fonts','.git'];
+$excludeFiles = ['404.php','403.php','500.php','sitemap.xml','sitemap_index.xml','generate-sitemap.php','robots.txt'];
 
 // اگر می‌خوای صفحاتی را اجباراً حذف کنی (مثلاً thank-you)، اینجا بذار:
 $excludeByPathContains = ['/login', '/search', '/thank-you'];
