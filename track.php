@@ -101,7 +101,7 @@ if (file_exists($lyricsPath)) {
       <nav id="navMenu">
         <a href="https://samaxan.ir/bio.html" class="menulink">بیوگرافی</a>
         <a href="https://samaxan.ir/player.php" class="menulink">آهنگ‌ها</a>
-        <a href="#posts" class="menulink">پست‌ها</a>
+        <a href="https://samaxan.ir/image-gallery.html" class="menulink">گالری تصاویر</a>
         <a href="#footer" class="menulink">پروفایل ها</a>
       </nav>
     </header>

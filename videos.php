@@ -54,7 +54,7 @@ sort($audioFiles);
       <nav id="navMenu">
         <a href="https://samaxan.ir/bio.html" class="menulink">بیوگرافی</a>
         <a href="https://samaxan.ir/player.php" class="menulink">آهنگ‌ها</a>
-        <a href="#posts" class="https://samaxan.ir/image-gallery">گالری تصاویر</a>
+        <a href="https://samaxan.ir/image-gallery.html">گالری تصاویر</a>
         <a href="#footer" class="menulink">پروفایل ها</a>
       </nav>
     </header>
