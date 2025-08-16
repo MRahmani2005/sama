@@ -1219,7 +1219,7 @@ hr {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 25px
+  gap: 80px 25px;
 }
 
 .video-page-box {
@@ -1233,6 +1233,9 @@ hr {
   border-radius: 20px;
   box-shadow: 0 0 40px #1c1c1c;
   backdrop-filter: blur(30px);
+}
+.video-page-box{
+  font-size: 14px;
 }
 
 .video-page-box video {
@@ -1251,6 +1254,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
 }
 
 .news-buttons a {
@@ -2087,5 +2091,8 @@ a.button-form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .news-buttons{
+    justify-content: center;
   }
 }
