@@ -41,7 +41,7 @@ sort($audioFiles);
   <link rel="shortcut icon"  href="https://samaxan.ir/img/samaxan-gallery38.jpg"/>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="style.css?v=20250825" />
+  <link rel="stylesheet" href="style.css?v=20250827" />
 
 </head>
 <body>
@@ -113,7 +113,7 @@ sort($audioFiles);
       </div>
       <div class="copyright">© 2025 Sama xan</div>
     </footer>
-    <script src="script.js?v=20250806"></script>
+    <script src="script.js?v=20250807"></script>
 
 </body>
 </html>

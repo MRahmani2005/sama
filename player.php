@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
   <!-- فایل‌های css و js با جلوگیری از کش -->
-  <link rel="stylesheet" href="style.css?v=20250825">
+  <link rel="stylesheet" href="style.css?v=20250827">
 </head>
 
 <body>
@@ -177,6 +177,6 @@ document.getElementById("searchInput").addEventListener("input", function() {
       </div>
       <div class="copyright">© 2025 Sama xan</div>
     </footer>
-    <script src="script.js?v=20250821"></script>
+    <script src="script.js?v=20250827"></script>
 </body>
 </html>
