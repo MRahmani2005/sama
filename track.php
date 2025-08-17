@@ -86,7 +86,6 @@ if (file_exists($lyricsPath)) {
   </script>
 
   <!-- استایل -->
-  <link rel="shortcut icon"  href="https://samaxan.ir/img/samaxan-gallery38.jpg"/>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="style.css?v=20250825">

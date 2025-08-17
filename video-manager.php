@@ -89,7 +89,6 @@ sort($audioFiles);
 <head>
   <meta charset="UTF-8">
   <title>مدیریت ویدیو ترک‌ها</title>
-  <link rel="shortcut icon"  href="https://samaxan.ir/img/samaxan-gallery38.jpg"/>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
