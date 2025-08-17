@@ -1672,8 +1672,8 @@ a.button-form {
     display: flex;
     flex-direction: column;
     background-color: #171f2a;
-    position: absolute;
-    top: 57px;
+    position: fixed;
+    top: 60px;
     right: -100%;
     width: 85%;
     padding: 40px 20px;
@@ -2094,5 +2094,9 @@ a.button-form {
   }
   .news-buttons{
     justify-content: center;
+  }
+  .en-page-img{
+    left: initial;
+    right: 45px;
   }
 }
