@@ -51,6 +51,7 @@ if (file_exists($lyricsPath)) {
 <head>
   <meta charset="UTF-8">
   <title><?= $title ?> - Sama Xan</title>
+  <link rel="shortcut icon"  href="https://samaxan.ir/img/samaxan-gallery38.jpg"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="دانلود و پخش آنلاین آهنگ <?= $title ?> از سما خان">
 
@@ -101,7 +102,8 @@ if (file_exists($lyricsPath)) {
       <nav id="navMenu">
         <a href="https://samaxan.ir/bio.html" class="menulink">بیوگرافی</a>
         <a href="https://samaxan.ir/player.php" class="menulink">آهنگ‌ها</a>
-        <a href="https://samaxan.ir/image-gallery.html" class="menulink">گالری تصاویر</a>
+        <a href="https://samaxan.ir/image-gallery.html" class="posts">گالری تصاویر</a>
+        <a href="https://samaxan.ir/program-news.html" class="program-news">اخبار و برنامه ها</a>
         <a href="#footer" class="menulink">پروفایل ها</a>
       </nav>
     </header>
@@ -158,7 +160,7 @@ if (file_exists($lyricsPath)) {
 </main>
 
 <!-- فوتر -->
-    <footer id="footer" class="footer track-footer">
+    <footer id="footer" class="footer">
       <div class="column">
         <div class="logo">sama xan</div>
         <p>وب سایت رسمی سما خان</p>
@@ -166,8 +168,8 @@ if (file_exists($lyricsPath)) {
       <div class="column nav-links">
         <h4 style="color: #f9c74f">صفحات</h4>
         <a href="https://samaxan.ir/bio.html">بیوگرافی</a><br />
-        <a href="">تست</a><br />
-        <a href="">تست</a><br />
+        <a href="https://samaxan.ir/player.php">آهنگ ها</a><br />
+        <a href="https://samaxan.ir/image-gallery.html">گالری تصاویر</a><br />
       </div>
       <div class="column social-icons">
         <h4 style="color: #f9c74f">پروفایل ها</h4>
