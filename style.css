@@ -1678,6 +1678,10 @@ a.button-form {
   text-decoration: none;
   color: #222;
   transition: transform 0.2s ease;
+  width: 99%;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  overflow: hidden;
 }
 
 .track-card:hover {

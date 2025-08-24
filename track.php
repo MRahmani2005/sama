@@ -105,7 +105,7 @@ $seoUrl = "https://samaxan.ir/music/" . $baseName;
   </script>
 
   <!-- استایل با مسیر مطلق -->
-  <link href="/style.css?v=20250858" rel="stylesheet">
+  <link href="/style.css?v=20250859" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
