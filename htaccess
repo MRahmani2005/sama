@@ -1,0 +1,16 @@
+# فعال کردن مود ریرایت
+RewriteEngine On
+
+# ریدایرکت برای آهنگ‌ها به track.php
+# مثال: /music/music_20250822_165555 => track.php?file=music_20250822_165555.mp3
+RewriteRule ^music/([a-zA-Z0-9_-]+)$ track.php?file=$1.mp3 [L,QSA]
+
+# ریدایرکت خودکار www به بدون www (اختیاری)
+RewriteCond %{HTTP_HOST} ^www\.samaxan\.ir [NC]
+RewriteRule ^(.*)$ https://samaxan.ir/$1 [L,R=301]
+
+# جلوگیری از لیست شدن فایل‌ها در دایرکتوری‌ها
+Options -Indexes
+
+# بازنویسی مسیر favicon و سایر فایل‌ها اگر لازم شد (مثال)
+# RewriteRule ^favicon\.ico$ /img/samaxan-gallery38.jpg [L]

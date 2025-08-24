@@ -531,6 +531,12 @@ nav a:hover {
     padding: 6px 14px;
     font-size: 0.9rem;
   }
+
+  .language-switcher a {
+    margin: 5px 8px;
+    padding: 6px 14px;
+    font-size: 0.9rem;
+  }
 }
 
 /* برای نمایش بهتر ایموجی */
@@ -540,14 +546,6 @@ nav a:hover {
   font-size: 1.2rem;
 }
 
-/* ریسپانسیو برای موبایل */
-@media (max-width: 480px) {
-  .language-switcher a {
-    margin: 5px 8px;
-    padding: 6px 14px;
-    font-size: 0.9rem;
-  }
-}
 
 /* اسلایدر */
 .slider-container {
@@ -1234,7 +1232,8 @@ hr {
   box-shadow: 0 0 40px #1c1c1c;
   backdrop-filter: blur(30px);
 }
-.video-page-box{
+
+.video-page-box {
   font-size: 14px;
 }
 
@@ -1438,111 +1437,117 @@ input[type="file"]:focus {
 }
 
 /* جدول */
-table {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto 50px auto;
-  border-collapse: collapse;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  overflow: hidden;
-  font-size: 0.95rem;
-  background-color: white;
-}
+/* =========================
+   🎶 TABLE STYLING
+   ========================= */
 
-/* ردیف‌های جدول */
+/* هدر جدول */
 thead tr {
-  background-color: #27ae60;
-  color: white;
+  background: linear-gradient(135deg, #27ae60, #219150);
+  color: #fff;
   font-weight: 700;
   font-size: 1rem;
   display: flex;
-  flex-direction: row;
-  gap: 15px;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  padding: 14px;
+  border-radius: 14px 14px 0 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 thead tr th {
-  padding: 14px 12px;
+  flex: 1;
   text-align: center;
-  vertical-align: middle;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  padding: 12px;
   border: none;
 }
 
+/* ردیف‌های جدول */
 tbody tr {
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: stretch;
   width: 100%;
-  padding: 10px 0;
-  margin: 0;
-  border-bottom: 1px solid #ccc;
+  padding: 14px;
+  margin: 0 0 10px 0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-thead th,
-tbody td {
-  padding: 14px 12px;
-  border-bottom: 1px solid #ddd;
+/* افکت هاور */
+tbody tr:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  background: #fdfdfd;
+}
+
+/* ستون‌های عمومی */
+tbody tr td {
+  flex: 1;
   text-align: center;
-  vertical-align: middle;
-}
-
-/* ردیف‌های زوج */
-tbody tr:nth-child(even) {
-  background-color: #f4f9f4;
+  color: #333;
+  padding: 10px;
+  border: none;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ستون متن آهنگ */
 td.upload-lyrics {
-  margin: 10px auto;
-  white-space: nowrap;
-  text-align: justify;
+  flex: 2;
   font-size: 0.95rem;
-  line-height: 2rem;
-  color: #000;
-  border: 1px solid #ccc;
-  overflow-y: scroll;
-  flex-grow: 1;
-  max-height: 200px;
-  border-radius: 20px;
-  text-overflow: ellipsis;
+  line-height: 1.6rem;
+  text-align: justify;
+  color: #111;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f9f9f9;
+  border: 1px solid #e6e6e6;
+  overflow-y: auto;
+  max-height: 150px;
+  scrollbar-width: thin;
+  scrollbar-color: #27ae60 #e9e9e9;
+}
+
+/* اسکرول بار شیک برای متن */
+td.upload-lyrics::-webkit-scrollbar {
+  width: 6px;
+}
+
+td.upload-lyrics::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 10px;
+}
+
+td.upload-lyrics::-webkit-scrollbar-thumb {
+  background: #27ae60;
+  border-radius: 10px;
 }
 
 /* ستون پلیر */
 td.audio-cell {
-  padding: 8px 12px;
-  flex-grow: 2;
-  width: 100%;
-}
-
-/* پلیر */
-.audio-cell audio {
-  width: 100%;
-  max-width: 350px;
-  height: 50px;
-  outline: none;
-  border-radius: 50px;
-  background-color: #eee;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  display: block;
-  margin: 0 auto;
-}
-
-tbody tr td {
+  flex: 1.5;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
-  width: calc(25% - 20px);
-  border: none;
-  color: #000;
 }
+
+/* پلیر صوتی */
+.audio-cell audio {
+  width: 100%;
+  max-width: 300px;
+  height: 45px;
+  border-radius: 30px;
+  background-color: #f1f1f1;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+
 
 /* لینک‌های عملیات */
 a.button-link {
@@ -1575,24 +1580,26 @@ a.button-link.delete:hover {
 .edit-form {
   max-width: 700px;
   margin: 30px auto 40px auto;
-  background: linear-gradient(to right,#0f2027 #1f2937 ) ;
+  background: linear-gradient(to right, #0f2027 #1f2937);
   border: 1.5px solid #ffeeba;
   padding: 25px 30px;
   border-radius: 12px;
   box-sizing: border-box;
 }
-.edit-form textarea{
+
+.edit-form textarea {
   margin-top: 10px;
   height: 150px;
 }
 
-.edit-form .input-upload{
+.edit-form .input-upload {
   margin-top: 10px;
 }
 
-.edit-form label{
+.edit-form label {
   margin-bottom: -10px;
 }
+
 .edit-form h2 {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -1627,22 +1634,60 @@ a.button-form {
   text-decoration: none;
 }
 
-.form-song-name{
+.form-song-name {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0;
 }
-.form-song-name input{
+
+.form-song-name input {
   padding: 10px 15px;
   border: 1px solid #eee;
   border-radius: 20px;
-
 }
 
-/* ریسپانسیو */
+.related-tracks-wrapper {
+  all: revert;
+  /* همه استایل‌ها به حالت مرورگر برگرده */
+  display: block;
+  /* مطمئن بشه block مونده */
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+.related-tracks h2 {
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.track-links {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.track-card {
+  display: block;
+  padding: 1rem;
+  background: linear-gradient(to left, #ff8800, #ffd900);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-decoration: none;
+  color: #222;
+  transition: transform 0.2s ease;
+}
+
+.track-card:hover {
+  transform: translateY(-4px);
+}
+
+
+/*  ریسپانسیو  */
 @media (max-width: 768px) {
+
   main.track-page {
     margin: 2rem 1rem;
     padding: 1.2rem 1.5rem;
@@ -1664,10 +1709,32 @@ a.button-form {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     display: inline-block;
   }
-}
 
-/*  ریسپانسیو  */
-@media (max-width: 768px) {
+  thead {
+    display: none;
+    /* هدر در موبایل حذف میشه */
+  }
+
+  tbody tr {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+  }
+
+  tbody tr td {
+    width: 100%;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 8px 0;
+  }
+
+  td.upload-lyrics {
+    max-height: none;
+    width: 100%;
+  }
+
   nav {
     display: flex;
     flex-direction: column;
@@ -2092,11 +2159,15 @@ a.button-form {
     justify-content: center;
     align-items: center;
   }
-  .news-buttons{
+
+  .news-buttons {
     justify-content: center;
   }
-  .en-page-img{
+
+  .en-page-img {
     left: initial;
     right: 45px;
   }
+
+
 }

@@ -145,7 +145,7 @@ $files = array_diff(scandir($targetDir), ['.', '..']);
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<link rel="stylesheet" href="style.css?v=20250827">
+<link rel="stylesheet" href="style.css?v=20250835">
 <meta charset="UTF-8" />
 <title>آپلود و مدیریت آهنگ‌ها</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
