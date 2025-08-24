@@ -187,4 +187,7 @@ document.getElementById("searchInput").addEventListener("input", function() {
         <a href="https://m.youtube.com/@samaxaaan"><i class="bi bi-youtube"></i></a>
       </div>
       <div class="copyright">© 2025 Sama xan</div>
-</footer
+</footer>
+<script src="script.js?v=20250810"></script>
+</body>
+</head>
