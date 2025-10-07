@@ -95,8 +95,8 @@ sort($audioFiles);
       <div class="column nav-links">
         <h4 style="color: #f9c74f">صفحات</h4>
         <a href="https://samaxan.ir/bio.html">بیوگرافی</a><br />
-        <a href="">تست</a><br />
-        <a href="">تست</a><br />
+        <a href="https://samaxan.ir/player.php">آهنگ ها</a><br />
+        <a href="https://samaxan.ir/image-gallery.html">گالری تصاویر</a><br />
       </div>
       <div class="column social-icons">
         <h4 style="color: #f9c74f">پروفایل ها</h4>
