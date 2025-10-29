@@ -1983,6 +1983,9 @@ a.button-form {
     flex-grow: 1;
     justify-content: flex-end;
   }
+  .footer{
+    padding: 40px 60px 150px 60px;
+  }
 
   .player-footer {
     padding-bottom: 195px;
